@@ -1,14 +1,19 @@
-import requests
+from .http_client import HttpClient
 
 class Index():
-    api_domain = "https://api.kalasearch.cn"
     config = None
     index_id = ""
+    http_client = None
 
     def __init__(self, config, index_id):
         self.config = config
         self.index_id = index_id
+        self.http_client = HttpClient(self.config)
+
+    def get_info(self):
+        path = 'indexes/{}/info'.format(self.index_id)
+        return self.http_client.get(path)
     
-    @staticmethod
-    def get_index(config, index_id):
-        return Index(config, index_id)
+    def add_document(self, document):
+        path = 'indexes/{}/docs'.format(self.index_id)
+        return self.http_client.post(path, document)

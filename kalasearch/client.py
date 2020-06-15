@@ -12,4 +12,5 @@ class Client():
         self.config = Config(appId, apiKey)
     
     def get_index(self, index_id):
-        return Client.get_index(self.config, index_id)
+        return Index(self.config, index_id)
+        
