@@ -15,12 +15,8 @@ class HttpClient():
 
     def send_request(self, http_method, path, body=None):
         endpoint = self.config.domain + "/" + path
-        print("endpoint = " + endpoint)
         if body is None:
             request = http_method(endpoint, headers=self.headers)
-            print(request)
-            print(dir(request))
-            print(request.json())
         else:
             request = http_method(endpoint, headers=self.headers, json=body)
         return request.json()
