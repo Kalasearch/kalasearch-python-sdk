@@ -17,3 +17,10 @@ class Index():
     def add_document(self, document):
         path = 'indexes/{}/docs'.format(self.index_id)
         return self.http_client.post(path, document)
+    
+    def search(self, query):
+        path = 'indexes/{}/docs/search'.format(self.index_id)
+        search_params = {
+            'query': query
+        }
+        return self.http_client.post(path, search_params)
