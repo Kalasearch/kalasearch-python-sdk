@@ -10,3 +10,4 @@ document = {'name': 'Jay', 'published':'abc'}
 
 print(index.add_document(document))
 
+print(index.search("周杰伦"))
