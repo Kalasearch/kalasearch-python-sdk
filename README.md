@@ -75,7 +75,7 @@ index.add_document({'name': '大话西游', 'actors': '周星驰/吴孟达', 'ye
 
 
 ## 深入理解搜索引擎
-如果你对搜索技术感兴趣，或者单纯希望为用户搭建一个体验更好的搜索系统，我还出处
+如果你对搜索技术感兴趣，或者单纯希望为用户搭建一个体验更好的搜索系统，请关注卡拉搜索的技术博客[http://kalasearch.cn/blog](http://kalasearch.cn/blog)。
 
 
 ## LICENSE
