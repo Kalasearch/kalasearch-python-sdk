@@ -1,6 +1,10 @@
 # coding=utf-8
 
 from distutils.core import setup
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
   name = 'kalasearch',         
   packages = ['kalasearch'],   
@@ -25,5 +29,7 @@ setup(
         "Operating System :: OS Independent",
   ],
   include_package_data=True,
-  python_requires=">=3"
+  python_requires=">=3",
+  long_description=long_description,
+  long_description_content_type="text/markdown",
 )
