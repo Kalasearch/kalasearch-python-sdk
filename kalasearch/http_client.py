@@ -8,8 +8,8 @@ class HttpClient():
     def __init__(self, config):
         self.config = config
         self.headers = {
-            "apiKey": self.config.apiKey,
-            "appId": self.config.appId,
+            "X-Kalasearch-Id": self.config.appId,
+            "X-Kalasearch-Key": self.config.apiKey,
             "Content-Type": "application/json"
         }
 

@@ -19,7 +19,7 @@ class Index():
         return self.http_client.post(path, document)
     
     def search(self, query):
-        path = 'indexes/{}/docs/search'.format(self.index_id)
+        path = 'indexes/{}/query'.format(self.index_id)
         search_params = {
             'query': query
         }

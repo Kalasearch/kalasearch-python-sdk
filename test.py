@@ -1,13 +1,13 @@
 from kalasearch import Client
 
-myclient = Client("30bd6466-b03b-4289-baa8-cd745c5b9c33", "5d47ad94-0cd8-4d15-b4a1-283e932e6d1e")
+myclient = Client("3bc797e5-9538-4374-a82c-36a4cd9c0071", "19f9453a-8b9d-4af3-8021-d40fcd0f0dc2")
 
 
-index = myclient.get_index("5a84eb90-ec74-47d2-acb6-8fb6f6fc0878")
+index = myclient.get_index("bc4099ed-32bd-4262-9333-1b05398913fd")
 
 
 document = {'name': 'Jay', 'published':'abc'}
 
 print(index.add_document(document))
 
-print(index.search("周杰伦"))
+print(index.search("jay"))
