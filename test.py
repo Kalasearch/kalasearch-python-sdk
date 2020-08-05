@@ -1,13 +1,29 @@
+# -*- coding: utf-8 -*-
+
 from kalasearch import Client
+import json
 
-myclient = Client("3bc797e5-9538-4374-a82c-36a4cd9c0071", "19f9453a-8b9d-4af3-8021-d40fcd0f0dc2")
-
-
-index = myclient.get_index("bc4099ed-32bd-4262-9333-1b05398913fd")
+myclient = Client("592918d4-32b0-4fb6-8000-4d8a3781251f", "f623e196-1dd4-4f89-8421-9354d2a6cfec")
 
 
-document = {'name': 'Jay', 'published':'abc'}
+index = myclient.get_index("72cda695-1a48-4a3e-8b80-0ccb36d408b1")
 
-print(index.add_document(document))
 
-print(index.search("jay"))
+documents = [
+    {"name": "大话西游1"},
+    {"name": "大话西游2"},
+    {"name": "大话西游3"},
+    {"name": "大话西游4"}
+]
+
+#print(index.add_document(document))
+index.add_documents(documents)
+
+
+options = {
+    "searchableFields": ["name", "story"],
+    "highlightFields": ["name", "story"]
+}
+
+search_results = index.search("chen")
+print(search_results)
