@@ -5,8 +5,6 @@
   - [功能简介](#功能简介)
   - [🎬开始使用](#开始使用)
   - [💻常见操作](#常见操作)
-    - [添加文档](#添加文档)
-    - [搜索文档](#搜索文档)
   - [深入理解搜索引擎](#深入理解搜索引擎)
   - [LICENSE](#license)
 ## 功能简介
@@ -21,7 +19,7 @@
 pip3 install kalasearch
 ```
 
-在安装后，本地应该可以导入kalasearch模块，即可开始索引文档和搜索文档。我们以豆瓣电影数据为例，说明如何打造一个简单的电影搜索引擎
+在安装后，本地应该可以导入kalasearch模块，即可开始索引对象和搜索对象。我们以豆瓣电影数据为例，说明如何打造一个简单的电影搜索引擎
 
 ```jsx
 # 导入卡拉搜索SDK
@@ -34,7 +32,7 @@ myclient = Client("YOUR AppId", "YOUR ApiKey")
 index = myclient.get_index("YOUR indexId") 
 
 # 添加第一部电影 
-index.add_document({'name': '大话西游', 'actors': '周星驰/吴孟达', 'year':2000})
+index.add_object({'name': '大话西游', 'actors': '周星驰/吴孟达', 'year':2000})
 
 # 用关键词进行搜索
 index.search('大话')
@@ -48,15 +46,15 @@ index.search('孟达')
 
 卡拉搜索的所有数据接口均为在[卡拉搜索REST-API](https://kalasearch.cn/docs/rest-api)上的封装，因此所有的操作与REST API中记录的一致。具体来说，本Python SDK中有如下操作
 
-### 添加文档 
-`index.add_document(document)` 
+### 添加对象
+`index.add_object(object)` 
 | 参数名 | 说明 |
 | ------| ----|
-| document| JSON格式的文档|
+| object| JSON格式的对象数据 |
 
 
 ```jsx
-index.add_document({'name': '大话西游', 'actors': '周星驰/吴孟达', 'year':2000})
+index.add_object({'name': '大话西游', 'actors': '周星驰/吴孟达', 'year':2000})
 ```
 
 返回值: 
@@ -65,7 +63,7 @@ index.add_document({'name': '大话西游', 'actors': '周星驰/吴孟达', 'ye
 {'_id': 'wQawuHIBeKV8--CRsu-u'}
 ```
 
-### 搜索文档
+### 搜索对象
 `index.search(query, searchOptions=None)`
 | 参数名 | 说明 |
 | ------| ----|
