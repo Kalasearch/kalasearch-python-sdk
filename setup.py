@@ -14,7 +14,7 @@ setup(
   author = 'Eddie Xie',                 
   author_email = 'oeddyo@gmail.com',    
   url = 'https://kalasearch.cn',
-  download_url = 'https://github.com/oeddyo/kalasearch-python-sdk/archive/1.10.0.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/oeddyo/kalasearch-python-sdk/archive/1.11.0.tar.gz',    # I explain this later on
   keywords = ['搜索', '后端', '中台', 'search', 'full-text search', '搜索引擎', '站内搜索'],   
   install_requires=[            
           'requests',
