@@ -14,12 +14,12 @@ class Index():
         path = 'indexes/{}/info'.format(self.index_id)
         return self.http_client.get(path)
     
-    def add_document(self, document):
-        path = 'indexes/{}/docs'.format(self.index_id)
+    def add_object(self, document):
+        path = 'indexes/{}/objects'.format(self.index_id)
         return self.http_client.post(path, document)
 
-    def add_documents(self, documents):
-        path = 'indexes/{}/docs/batch'.format(self.index_id)
+    def add_objects(self, documents):
+        path = 'indexes/{}/objects/batch'.format(self.index_id)
         return self.http_client.post(path, documents)
     
     def search(self, query, options=None):
