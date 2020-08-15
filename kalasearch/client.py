@@ -9,7 +9,7 @@ class Client():
     config = None
 
     def __init__(self, appId, apiKey):
-        self.config = Config(appId, apiKey, domain="https://api.kalasearch.cn/v1")
+        self.config = Config(appId, apiKey)
     
     def get_index(self, index_id):
         return Index(self.config, index_id)
