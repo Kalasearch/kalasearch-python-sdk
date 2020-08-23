@@ -32,7 +32,7 @@ class Index():
         }
         return self.http_client.post(path, search_params)
 
-    def delete(self, object_id):
+    def delete_object(self, object_id):
         path = "indexes/{}/objects/{}".format(self.index_id, object_id)
         response = self.http_client.delete(path)
         return response
