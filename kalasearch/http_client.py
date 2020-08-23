@@ -26,3 +26,9 @@ class HttpClient():
 
     def post(self, path, body=None):
         return self.send_request(requests.post, path, body)
+
+    def put(self, path, body=None):
+        return self.send_request(requests.put, path, body)
+
+    def delete(self, path):
+        return self.send_request(requests.delete, path)
