@@ -31,3 +31,13 @@ class Index():
             **options
         }
         return self.http_client.post(path, search_params)
+
+    def delete_object(self, object_id):
+        path = "indexes/{}/objects/{}".format(self.index_id, object_id)
+        response = self.http_client.delete(path)
+        return response
+
+    def update_object(self, object_id, document):
+        path = "indexes/{}/objects/{}".format(self.index_id, object_id)
+        response = self.http_client.put(path, document)
+        return response
