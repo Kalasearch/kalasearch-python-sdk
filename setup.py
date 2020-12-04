@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
 setup(
   name = 'kalasearch',         
   packages = ['kalasearch'],   
-  version = '1.12.0',      
+  version = '1.13.0',      
   license='MIT',        
   description = '卡拉搜索SDK-五分钟帮你打造站内、app内搜索引擎，适用于APP、小程序、电商、软件服务等领域',   
   author = 'Eddie Xie',                 
