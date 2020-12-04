@@ -3,21 +3,18 @@
 from kalasearch import Client
 import json
 
-myclient = Client("", "")
+myclient = Client("YOUR_APP_ID", "YOUR_API_KEY")
 
 
-index = myclient.get_index("")
+index = myclient.get_index("YOUR_INDEX_ID")
 
 
 documents = [
-    {"name": "陈冠希1"},
-    {"name": "陈冠希2"}
+    {"name": "周杰伦"},
+    {"name": "陈冠希"}
 ]
 
-#print(index.add_document(document))
 print(index.add_objects(documents))
-
-
 
 options = {
     "searchableFields": ["name", "story"],
