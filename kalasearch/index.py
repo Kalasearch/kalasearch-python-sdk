@@ -18,9 +18,14 @@ class Index():
         path = 'indexes/{}/objects'.format(self.index_id)
         return self.http_client.post(path, document)
 
-    def add_objects(self, documents):
-        path = 'indexes/{}/objects/batch'.format(self.index_id)
-        return self.http_client.post(path, documents)
+    def add_objects(self, objects):
+        path = 'indexes/{}/batch'.format(self.index_id)
+        wrapped_objects = {
+            "actions" : [
+                {"body": obj, "actionType": "ADD_OBJECT"} for obj in objects
+            ]
+        }
+        return self.http_client.post(path, wrapped_objects)
     
     def search(self, query, options=None):
         if options is None:
